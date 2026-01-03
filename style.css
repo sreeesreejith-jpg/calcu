@@ -36,7 +36,7 @@ body {
     background: var(--calc-bg);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 .calculator-wrapper {
@@ -44,6 +44,19 @@ body {
     flex-direction: column;
     height: 100%;
     padding: 20px;
+}
+
+/* Header Branding */
+.app-header {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    opacity: 0.7;
+    text-shadow: 0 0 10px var(--accent-glow);
 }
 
 /* Display Area */
@@ -69,7 +82,7 @@ body {
     font-size: 4rem;
     font-weight: 600;
     color: white;
-    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 /* Keypad */
@@ -92,8 +105,8 @@ body {
     cursor: pointer;
     height: 70px;
     transition: all 0.2s ease;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2), 
-                -2px -2px 5px rgba(255,255,255,0.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+        -2px -2px 5px rgba(255, 255, 255, 0.05);
     user-select: none;
     display: flex;
     align-items: center;
@@ -102,7 +115,7 @@ body {
 
 .btn:active {
     transform: scale(0.95);
-    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn.func {
@@ -125,18 +138,20 @@ body {
 }
 
 .btn.zero {
-    grid-column: span 1; /* Keeping it standard for now, or could be span 2 */
+    grid-column: span 1;
+    /* Keeping it standard for now, or could be span 2 */
 }
 
 /* Glassmorphism tweaks for specific elements if needed */
 .calculator-wrapper {
-   /* backdrop-filter: blur(10px); */
+    /* backdrop-filter: blur(10px); */
 }
 
 @media (max-height: 600px) {
     .current-input {
         font-size: 3rem;
     }
+
     .btn {
         height: 55px;
         border-radius: 15px;

@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "sreejith.prime",
+        "sha256_cert_fingerprints": ["B8:6E:E3:9E:6E:84:9B:35:E3:EE:B0:C5:50:CD:56:46:40:BD:FF:D9:72:58:5E:F4:F4:05:FD:DF:01:AE:75:D8"]
+      }
+    }]

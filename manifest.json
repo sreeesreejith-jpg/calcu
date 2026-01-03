@@ -1,6 +1,6 @@
 {
-  "name": "Pro Calculator",
-  "short_name": "Calculator",
+  "name": "Sreejith Prime",
+  "short_name": "Sreejith Prime",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#1a1a2e",
@@ -20,4 +20,3 @@
     }
   ]
 }
-
