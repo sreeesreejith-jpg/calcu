@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #0f0f1a;
+    --calc-bg: #1a1a2e;
+    --btn-bg: #262640;
+    --btn-text: #e0e0e0;
+    --accent-color: #00d2ff;
+    --accent-glow: rgba(0, 210, 255, 0.4);
+    --op-color: #7b2cbf;
+    --op-glow: rgba(123, 44, 191, 0.4);
+    --equal-bg: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    background: var(--calc-bg);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Display Area */
+.display-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    margin-bottom: 20px;
+    word-break: break-all;
+}
+
+.history {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    min-height: 1.5rem;
+}
+
+.current-input {
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Keypad */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 70px;
+    transition: all 0.2s ease;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2), 
+                -2px -2px 5px rgba(255,255,255,0.05);
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn.func {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.btn.op {
+    background: var(--op-color);
+    color: white;
+    box-shadow: 0 0 15px var(--op-glow);
+}
+
+.btn.equal {
+    grid-column: span 2;
+    background: var(--equal-bg);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.btn.zero {
+    grid-column: span 1; /* Keeping it standard for now, or could be span 2 */
+}
+
+/* Glassmorphism tweaks for specific elements if needed */
+.calculator-wrapper {
+   /* backdrop-filter: blur(10px); */
+}
+
+@media (max-height: 600px) {
+    .current-input {
+        font-size: 3rem;
+    }
+    .btn {
+        height: 55px;
+        border-radius: 15px;
+    }
+}
